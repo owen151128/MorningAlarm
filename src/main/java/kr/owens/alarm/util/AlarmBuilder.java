@@ -19,9 +19,6 @@ public class AlarmBuilder {
         SourceModifier.SOURCE_NAME[] sourceNames = SourceModifier.SOURCE_NAME.values();
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         DiagnosticCollector<JavaFileObject> diagnosticsCollector = new DiagnosticCollector<>();
-        if(compiler == null) {
-            System.out.println("im null!");
-        }
         StandardJavaFileManager fileManager = compiler.getStandardFileManager(null, null, StandardCharsets.UTF_8);
         Iterable<? extends JavaFileObject> input;
         CompilationTask compilationTask;
